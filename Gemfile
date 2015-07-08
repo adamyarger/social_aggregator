@@ -20,6 +20,10 @@ gem 'neat'
 gem 'refills'
 gem "normalize-rails"
 
+# api/oauth
+gem 'flickraw'
+gem 'figaro'
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
