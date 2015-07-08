@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SocialAggregator</title>
+  <title>SocialAgg</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<%= render 'layouts/header' %>
+
+	<div class="container">
+		<% flash.each do |message_type, message| %>
+			<div id="flash" class="flash-<%= message_type %>"><%= message %></div>
+		<% end %>
+
+		<%= yield %>
+	</div>
 
 </body>
 </html>
